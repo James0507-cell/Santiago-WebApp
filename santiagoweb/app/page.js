@@ -2,190 +2,157 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* Navigation Menu */}
-      <nav className="bg-white shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 text-gray-800 font-sans">
+      {/* Navigation Bar */}
+      <nav className="bg-white shadow-sm sticky top-0 z-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-indigo-600">TailwindDemo</h1>
+              <span className="text-xl font-bold text-indigo-600">Santiago's Blog</span>
             </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#buttons" className="text-gray-700 hover:text-indigo-600 transition">Buttons</a>
-              <a href="#colors" className="text-gray-700 hover:text-indigo-600 transition">Colors</a>
-              <a href="#layouts" className="text-gray-700 hover:text-indigo-600 transition">Layouts</a>
-              <a href="#text" className="text-gray-700 hover:text-indigo-600 transition">Typography</a>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-600 hover:text-indigo-600 transition">Home</a>
+              <a href="#" className="text-gray-600 hover:text-indigo-600 transition">About</a>
+              <a href="#" className="text-gray-600 hover:text-indigo-600 transition">Contact</a>
             </div>
-            <button className="md:hidden">
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-5xl font-extrabold text-gray-900 mb-4">
-            Tailwind CSS Components
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            A showcase of beautiful, responsive components built with Tailwind CSS
-          </p>
-        </div>
+      {/* Main Content Area */}
+      <main className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <article className="bg-white rounded-xl shadow-lg overflow-hidden">
+          {/* Header Image / Banner */}
+          <div className="h-64 bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white text-center px-4">
+              How to Use Tailwind CSS
+            </h1>
+          </div>
 
-        {/* Buttons Section */}
-        <section id="buttons" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Buttons</h2>
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <div className="flex flex-wrap gap-4">
-              <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition">
-                Primary Button
-              </button>
-              <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition">
-                Success Button
-              </button>
-              <button className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition">
-                Danger Button
-              </button>
-              <button className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded transition">
-                Secondary Button
-              </button>
-              <button className="border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white font-bold py-2 px-4 rounded transition">
-                Outline Button
-              </button>
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-2 px-4 rounded transition">
-                Gradient Button
-              </button>
+          <div className="p-8 md:p-12">
+            {/* Article Meta */}
+            <div className="flex items-center mb-8 text-sm text-gray-500 border-b border-gray-100 pb-8">
+              <span className="mr-4">Published on Dec 20, 2025</span>
+              <span className="mx-2">•</span>
+              <span>By Admin</span>
+              <span className="mx-2">•</span>
+              <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold">Tutorial</span>
             </div>
-          </div>
-        </section>
 
-        {/* Colors Section */}
-        <section id="colors" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Color Palette</h2>
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-              <div className="text-center">
-                <div className="w-full h-24 bg-red-500 rounded-lg mb-2"></div>
-                <p className="text-sm font-medium">Red</p>
-              </div>
-              <div className="text-center">
-                <div className="w-full h-24 bg-blue-500 rounded-lg mb-2"></div>
-                <p className="text-sm font-medium">Blue</p>
-              </div>
-              <div className="text-center">
-                <div className="w-full h-24 bg-green-500 rounded-lg mb-2"></div>
-                <p className="text-sm font-medium">Green</p>
-              </div>
-              <div className="text-center">
-                <div className="w-full h-24 bg-yellow-500 rounded-lg mb-2"></div>
-                <p className="text-sm font-medium">Yellow</p>
-              </div>
-              <div className="text-center">
-                <div className="w-full h-24 bg-purple-500 rounded-lg mb-2"></div>
-                <p className="text-sm font-medium">Purple</p>
-              </div>
-              <div className="text-center">
-                <div className="w-full h-24 bg-pink-500 rounded-lg mb-2"></div>
-                <p className="text-sm font-medium">Pink</p>
-              </div>
-            </div>
-          </div>
-        </section>
+            {/* Introduction */}
+            <section className="mb-10">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Introduction</h2>
+              <p className="text-lg leading-relaxed text-gray-700 mb-4">
+                Tailwind CSS is a utility-first CSS framework that has revolutionized the way developers build modern websites. 
+                Unlike traditional frameworks that give you pre-built components (like buttons or navbars), Tailwind provides you with low-level utility classes 
+                that let you build completely custom designs without ever leaving your HTML.
+              </p>
+              <p className="text-lg leading-relaxed text-gray-700">
+                In this tutorial, we'll explore how to get started with Tailwind CSS and why it's become a favorite tool for frontend developers worldwide.
+              </p>
+            </section>
 
-        {/* Typography Section */}
-        <section id="text" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Typography</h2>
-          <div className="bg-white rounded-lg shadow-md p-8 space-y-4">
-            <h1 className="text-5xl font-bold text-gray-900">Heading 1 - Extra Large</h1>
-            <h2 className="text-4xl font-bold text-gray-900">Heading 2 - Large</h2>
-            <h3 className="text-3xl font-bold text-gray-900">Heading 3 - Medium</h3>
-            <p className="text-xl text-gray-700">This is a large paragraph with text-xl class.</p>
-            <p className="text-base text-gray-600">This is a regular paragraph with text-base class.</p>
-            <p className="text-sm text-gray-500">This is small text with text-sm class.</p>
-            <p className="font-bold text-gray-900">This is bold text.</p>
-            <p className="italic text-gray-700">This is italic text.</p>
-            <p className="underline text-blue-600">This is underlined text.</p>
-          </div>
-        </section>
+            {/* Why Tailwind? */}
+            <section className="mb-10">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Tailwind?</h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                  <h3 className="font-bold text-blue-900 mb-2">Utility-First</h3>
+                  <p className="text-blue-800">
+                    Style elements directly in your markup using classes like <code className="bg-blue-200 px-1 rounded text-sm">flex</code>, <code className="bg-blue-200 px-1 rounded text-sm">pt-4</code>, and <code className="bg-blue-200 px-1 rounded text-sm">text-center</code>.
+                  </p>
+                </div>
+                <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+                  <h3 className="font-bold text-green-900 mb-2">Responsive Design</h3>
+                  <p className="text-green-800">
+                    Build responsive layouts with ease using prefixes like <code className="bg-green-200 px-1 rounded text-sm">md:</code>, <code className="bg-green-200 px-1 rounded text-sm">lg:</code>, and <code className="bg-green-200 px-1 rounded text-sm">hover:</code>.
+                  </p>
+                </div>
+              </div>
+            </section>
 
-        {/* Layouts Section */}
-        <section id="layouts" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Layout Examples</h2>
-          
-          {/* Grid Layout */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h3 className="text-xl font-bold mb-4">Grid Layout</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <div className="bg-gradient-to-br from-blue-400 to-blue-600 text-white p-6 rounded-lg">
-                <h4 className="font-bold text-lg mb-2">Card 1</h4>
-                <p>This is a card in a responsive grid layout.</p>
+            {/* Installation */}
+            <section className="mb-10">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Installation in Next.js</h2>
+              <p className="text-lg leading-relaxed text-gray-700 mb-4">
+                Setting up Tailwind in a Next.js project is incredibly straightforward. If you are creating a new project, you can simply run:
+              </p>
+              <div className="bg-gray-900 text-gray-100 rounded-lg p-4 mb-4 overflow-x-auto">
+                <code className="font-mono">npx create-next-app@latest my-project --typescript --tailwind --eslint</code>
               </div>
-              <div className="bg-gradient-to-br from-green-400 to-green-600 text-white p-6 rounded-lg">
-                <h4 className="font-bold text-lg mb-2">Card 2</h4>
-                <p>Grid automatically adjusts to screen size.</p>
-              </div>
-              <div className="bg-gradient-to-br from-purple-400 to-purple-600 text-white p-6 rounded-lg">
-                <h4 className="font-bold text-lg mb-2">Card 3</h4>
-                <p>Three columns on large screens, stacked on mobile.</p>
-              </div>
-            </div>
-          </div>
+              <p className="text-lg leading-relaxed text-gray-700 mb-4">
+                This command sets up everything for you automatically. If you're adding it to an existing project, you'll need to install the dependencies and configure your <code className="bg-gray-100 px-1 rounded text-gray-800">tailwind.config.js</code> and <code className="bg-gray-100 px-1 rounded text-gray-800">globals.css</code> files.
+              </p>
+            </section>
 
-          {/* Flex Layout */}
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <h3 className="text-xl font-bold mb-4">Flex Layout</h3>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <div className="bg-red-500 text-white p-4 rounded-lg flex-shrink-0">Item 1</div>
-              <div className="bg-orange-500 text-white p-4 rounded-lg flex-shrink-0">Item 2</div>
-              <div className="bg-yellow-500 text-white p-4 rounded-lg flex-shrink-0">Item 3</div>
-              <div className="bg-teal-500 text-white p-4 rounded-lg flex-shrink-0">Item 4</div>
-            </div>
-          </div>
-        </section>
+            {/* Basic Usage */}
+            <section className="mb-10">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Basic Usage Examples</h2>
+              <p className="text-lg leading-relaxed text-gray-700 mb-6">
+                Here are a few examples of how you can transform standard HTML using Tailwind classes.
+              </p>
 
-        {/* Image Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Images</h2>
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div>
-                <img 
-                  src="https://via.placeholder.com/400x300/3B82F6/FFFFFF?text=Image+1" 
-                  alt="Placeholder" 
-                  className="w-full rounded-lg shadow-md"
-                />
-                <p className="mt-2 text-center font-medium">Rounded Image</p>
+              {/* Example 1 */}
+              <div className="mb-8">
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">1. Styling a Button</h3>
+                <div className="bg-white border border-gray-200 rounded-lg p-6 mb-3">
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                    Click Me
+                  </button>
+                </div>
+                <div className="bg-gray-900 text-gray-100 rounded-lg p-4 overflow-x-auto">
+                  <code className="font-mono text-sm">
+                    &lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"&gt;<br/>
+                    &nbsp;&nbsp;Click Me<br/>
+                    &lt;/button&gt;
+                  </code>
+                </div>
               </div>
-              <div>
-                <img 
-                  src="https://via.placeholder.com/400x300/10B981/FFFFFF?text=Image+2" 
-                  alt="Placeholder" 
-                  className="w-full rounded-full shadow-md"
-                />
-                <p className="mt-2 text-center font-medium">Circular Image</p>
+
+              {/* Example 2 */}
+              <div className="mb-8">
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">2. Creating a Card</h3>
+                <div className="bg-white border border-gray-200 rounded-lg p-6 mb-3 max-w-sm mx-auto sm:mx-0">
+                  <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                    <div className="px-6 py-4">
+                      <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
+                      <p className="text-gray-700 text-base">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-900 text-gray-100 rounded-lg p-4 overflow-x-auto">
+                  <code className="font-mono text-sm">
+                    &lt;div class="max-w-sm rounded overflow-hidden shadow-lg bg-white"&gt;<br/>
+                    &nbsp;&nbsp;&lt;div class="px-6 py-4"&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="font-bold text-xl mb-2"&gt;The Coldest Sunset&lt;/div&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="text-gray-700 text-base"&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet...<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/>
+                    &nbsp;&nbsp;&lt;/div&gt;<br/>
+                    &lt;/div&gt;
+                  </code>
+                </div>
               </div>
-              <div>
-                <img 
-                  src="https://via.placeholder.com/400x300/8B5CF6/FFFFFF?text=Image+3" 
-                  alt="Placeholder" 
-                  className="w-full shadow-2xl"
-                />
-                <p className="mt-2 text-center font-medium">Shadow Image</p>
-              </div>
-            </div>
+            </section>
+
+             {/* Conclusion */}
+             <section>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Conclusion</h2>
+              <p className="text-lg leading-relaxed text-gray-700">
+                Tailwind CSS might look messy at first with all those classes in your HTML, but once you start using it, the speed at which you can build and iterate on designs is unmatched. 
+                Give it a try in your next project!
+              </p>
+            </section>
           </div>
-        </section>
-      </div>
+        </article>
+      </main>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-lg">Built with Next.js and Tailwind CSS</p>
-          <p className="text-sm text-gray-400 mt-2">A beginner-friendly tutorial project</p>
+      <footer className="bg-gray-100 border-t border-gray-200 mt-12 py-8">
+        <div className="max-w-4xl mx-auto px-4 text-center text-gray-500">
+          <p>&copy; 2025 Santiago's Tech Blog. All rights reserved.</p>
         </div>
       </footer>
     </div>
